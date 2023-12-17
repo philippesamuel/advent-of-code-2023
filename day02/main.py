@@ -12,7 +12,6 @@ def main():
     file_path: str = "./data/day02_input.txt"
     games: Iterable[Game] = read_and_parse_games(file_path)
     possible_games = filter(is_game_possible, games)
-    print(*(g.id for g in possible_games))
     print(sum(g.id for g in possible_games))
 
 

@@ -17,5 +17,5 @@ def parse_cube_set(cube_set: str) -> CubeSet:
     """Parse cube set from string."""
     return {
         Color(color): int(count)
-        for color, count in [cube.split() for cube in cube_set.split(",")]
+        for count, color in [cube.split() for cube in cube_set.split(",")]
     }

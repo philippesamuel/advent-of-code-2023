@@ -1,11 +1,11 @@
 """Day 2 puzzle of Advent of Code 2023."""
 import json
+from functools import reduce
+from operator import mul
 from pprint import pprint
 from typing import Iterable, Iterator
 from day02.game import Game, Color, CubeSet
 from day02.parser import parse_game
-from functools import reduce
-from operator import mul
 
 
 CONSTRAINTS = {Color.RED: 12, Color.GREEN: 13, Color.BLUE: 14}
@@ -54,6 +54,7 @@ def is_cube_set_possible(cube_set: CubeSet) -> bool:
         for color, constraint in CONSTRAINTS.items()
     )
 
+
 def find_minimal_cube_set(game: Game) -> CubeSet:
     """Find the minimal cube set to make a game possible."""
     minimal_cube_set = dict.fromkeys(Color, 0)
@@ -62,6 +63,7 @@ def find_minimal_cube_set(game: Game) -> CubeSet:
             if quantity > minimal_cube_set[color]:
                 minimal_cube_set[color] = quantity
     return minimal_cube_set
+
 
 if __name__ == "__main__":
     main()

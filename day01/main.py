@@ -1,4 +1,4 @@
-"""Day 1 puzzle 1 of Advent of Code 2023
+"""Day 1 puzzle of Advent of Code 2023
 
 - Read a file. 
 - For each line find the first and last digit, forming a two-digits number.
@@ -13,7 +13,7 @@ from lib.stringslib import find_number
 
 def main() -> None:
     # read file yielding each line
-    file_path: str = "./data/day-1-input.txt"
+    file_path: str = "./data/day01_input.txt"
     lines: Iterable[str] = read_lines(file_path)
     # for line in lines:
     #    print(line.strip())

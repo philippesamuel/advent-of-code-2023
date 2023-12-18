@@ -1,0 +1,1 @@
+"""Day 3 puzzle of Advent of Code 2023"""
